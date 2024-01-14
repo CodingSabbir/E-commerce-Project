@@ -3,6 +3,7 @@ import CountUp from 'react-countup';
 import { FcDataRecovery } from "react-icons/fc";
 import { FcContacts } from "react-icons/fc";
 import { FcRatings } from "react-icons/fc";
+import { Link } from 'react-router-dom';
 const subTitle = "Why Choose Us";
 const title = "Become a Marchant";
 const desc = "Take courses on your any device with our app & learn all about business what you want. Just download & install & start to learn";
@@ -46,10 +47,10 @@ const AboutUs = () => {
     </div>
   ))
 }
-<a href="#"
+<Link to={'/signup'}
         className=" mt-10 bg-transparent hover:bg-blue-700 hover:text-white text-white rounded shadow hover:shadow-lg py-2 px-4 border border-blue-300 hover:border-transparent">
         {btnText}
-      </a>
+      </Link>
 			</div>
 			<div class="p-8 mt-12 mb-6 md:mb-0 md:mt-0 ml-0 md:ml-12 lg:w-2/3  justify-center">
 				<div class="h-48 flex flex-wrap content-center">
