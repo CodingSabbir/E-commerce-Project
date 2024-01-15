@@ -1,9 +1,14 @@
 import React from 'react';
-
+import HeaderBanner from '../components/HeaderBanner';
 const Blog = () => {
     return (
         <div>
-            <h1>this is blog page</h1>
+            <HeaderBanner title='Our Blog Title  '
+            page='Page'
+            text='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus numquam ea!'
+            active='Blog'
+            currentPage='blog'
+            />
         </div>
     );
 };

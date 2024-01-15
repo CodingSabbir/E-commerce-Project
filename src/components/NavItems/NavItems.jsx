@@ -14,9 +14,9 @@ const NavItems = () => {
   return (
     <div>
       <nav className=" px-4 py-2 flex justify-between items-center bg-white fixed top-0 left-0 right-0 z-50">
-        <a className="text-3xl font-bold leading-none" >
+        <Link to={'/'} className="text-3xl font-bold leading-none" >
           <img  src={logo} alt="" />
-        </a>
+        </Link>
         <div className="lg:hidden">
           <button
             onClick={toggleMobileMenu}
