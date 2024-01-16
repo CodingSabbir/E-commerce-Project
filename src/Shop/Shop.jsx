@@ -13,8 +13,8 @@ const Shop = () => {
     const [currentPage, setCurrentPage] = useState(1)
     const productPage=12;
     const indexOfLastProduct=currentPage+productPage
-    const indexOfFastProduct=indexOfLastProduct-productPage
-    const currtentProduct=product.slice(indexOfFastProduct,indexOfLastProduct)
+    const indexOfFirstProduct=indexOfLastProduct-productPage
+    const currtentProduct=product.slice(indexOfFirstProduct,indexOfLastProduct)
     const pagenation=(pageNumber)=>{
         setCurrentPage(pageNumber)
     }
@@ -34,7 +34,7 @@ const Shop = () => {
             <div className='grid md:grid-cols-3 px-10 py-2'>
                 <div className='col-span-2'>
                     <div className='flex justify-between px-5'>
-                        <div>1</div>
+                        <div>Product </div>
                         <div className='flex gap-5'>
                             <button
                                 onClick={toggleView}
@@ -52,7 +52,7 @@ const Shop = () => {
                     </div>
                     
                     <div className=' md:flex md:flex-wrap'>
-                        <Product shopProduct={product} active={gridList}/>
+                        <Product shopProduct={currtentProduct} active={gridList}/>
                        
                     </div>
                     <div>
@@ -65,7 +65,7 @@ const Shop = () => {
                     </div>
                    
                 </div>
-                <div className='col-span-1'>right</div>
+                <div className='col-span-1'></div>
             </div>
         </div>
     );

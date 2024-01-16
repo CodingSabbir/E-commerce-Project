@@ -59,6 +59,8 @@
 
 
 import React, { useState } from 'react';
+import { FcNext } from "react-icons/fc";
+import { FcPrevious } from "react-icons/fc";
 
 const Pagination = ({ totallProduct, productPage }) => {
   const [activePage, setActivePage] = useState(1);
@@ -89,7 +91,7 @@ const Pagination = ({ totallProduct, productPage }) => {
     <div>
       <ul className='flex gap-5 py-7'>
         <li className={`px-2 rounded-full`} onClick={handlePrev}>
-          <button type="button">&lt;</button>
+          <button type="button"><FcPrevious /></button>
         </li>
         {pageNumber.map((number) => (
           <li key={number} className={`px-2 rounded-full ${number === activePage ? 'bg-red-500' : ''}`}>
@@ -97,7 +99,7 @@ const Pagination = ({ totallProduct, productPage }) => {
           </li>
         ))}
         <li className={`px-2 rounded-full`} onClick={handleNext}>
-          <button type="button">&gt;</button>
+          <button type="button"><FcNext /></button>
         </li>
       </ul>
     </div>
